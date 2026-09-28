@@ -1,12 +1,8 @@
 ---
 import '../styles/global.css';
+import BlogPost from '../components/BlogPost.astro';
+
 const { frontmatter } = Astro.props;
-const publishedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  timeZone: 'UTC',
-});
 ---
 
 <html lang="en">
@@ -22,10 +18,12 @@ const publishedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', 
       <a href="/blog/">Blog</a>
     </nav>
 
-    <article>
-      <h1>{frontmatter.title}</h1>
-      <p>Written by {frontmatter.author} on {publishedDate}</p>
+    <BlogPost
+      title={frontmatter.title}
+      author={frontmatter.author}
+      pubDate={frontmatter.pubDate}
+    >
       <slot />
-    </article>
+    </BlogPost>
   </body>
 </html>
