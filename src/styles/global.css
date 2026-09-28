@@ -1,0 +1,19 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
