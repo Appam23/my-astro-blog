@@ -23,6 +23,11 @@ const { frontmatter } = Astro.props;
       author={frontmatter.author}
       pubDate={frontmatter.pubDate}
     >
+    <div>
+  {frontmatter.tags.map((tag) => (
+    <a href={`/tags/${tag}`}>{tag}</a>
+  ))}
+    </div>
       <slot />
     </BlogPost>
   </body>

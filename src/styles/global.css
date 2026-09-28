@@ -1,10 +1,12 @@
 html {
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
   margin: 0;
   padding: 2rem;
+  background: #e1eaf2;
+  color: #111827;
 }
 
 nav {
@@ -14,6 +16,26 @@ nav {
 }
 
 a {
-  color: #1d4ed8;
+  color: #2563eb;
   text-decoration: none;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+article {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
 }
