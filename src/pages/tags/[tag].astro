@@ -4,7 +4,9 @@ import Layout from '../../layouts/Layout.astro';
 export async function getStaticPaths() {
   const posts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
 
-  const uniqueTags = [...new Set(posts.flatMap((post) => post.frontmatter.tags || []))];
+  const uniqueTags = [
+    ...new Set(posts.flatMap((post) => post.frontmatter.tags || [])),
+  ];
 
   return uniqueTags.map((tag) => {
     const filteredPosts = posts.filter((post) =>
@@ -13,7 +15,7 @@ export async function getStaticPaths() {
 
     return {
       params: { tag },
-      props: { posts: filteredPosts }
+      props: { posts: filteredPosts },
     };
   });
 }
