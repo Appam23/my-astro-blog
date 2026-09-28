@@ -1,10 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Greeting from '../components/Greeting.jsx';
 ---
 
 <Layout>
-	<main>
-		<h1>About Me</h1>
-		<p>I Appam learning to build websites with Astro.</p>
-	</main>
+  <main>
+    <h1>About Me</h1>
+    <p>I am learning to build websites with Astro.</p>
+
+    <Greeting client:visible />
+  </main>
 </Layout>
